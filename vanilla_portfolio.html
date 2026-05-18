@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Portfolio | Dr. Alex Rivera</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e40af', // Blue 800
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #1e3a8a 100%);
+            background-attachment: fixed;
+            color: #f1f5f9;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #60a5fa, #818cf8, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        section {
+            padding: 5rem 0;
+        }
+        .nav-scrolled {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-20 flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center font-display font-bold text-xl">A</div>
+                <span class="font-display font-medium text-lg tracking-tight">Dr. Alex Rivera</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#research" class="text-slate-300 hover:text-white transition-colors">Research</a>
+                <a href="#publications" class="text-slate-300 hover:text-white transition-colors">Publications</a>
+                <a href="#projects" class="text-slate-300 hover:text-white transition-colors">Projects</a>
+                <a href="#experience" class="text-slate-300 hover:text-white transition-colors">Experience</a>
+            </div>
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#" class="text-slate-300 hover:text-white"><i data-lucide="github" size="20"></i></a>
+                <a href="#" class="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-lg text-sm font-medium transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center pt-20 relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-1/4 -left-20 w-96 h-96 bg-white/10 rounded-full blur-[120px]"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 rounded-full text-blue-300 text-xs font-semibold mb-6 uppercase tracking-wider">
+                    <span class="w-2 h-2 bg-blue-400 rounded-full"></span> Stanford University
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight font-display text-white">
+                    Pushing the boundaries of <span class="text-gradient">Artificial Intelligence</span>
+                </h1>
+                <p class="text-lg text-slate-300 mb-8 max-w-xl leading-relaxed">
+                    I am a PhD student focused on the intersection of Large Language Models and Reinforcement Learning. My research aims to create more efficient and interpretable agents.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#publications" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-xl font-medium flex items-center gap-2 transition-all">
+                        Recent Research <i data-lucide="arrow-right" size="18"></i>
+                    </a>
+                    <button class="bg-white/5 hover:bg-white/10 border border-white/10 text-white px-8 py-4 rounded-xl font-medium flex items-center gap-2 transition-all">
+                        Download CV <i data-lucide="download" size="18"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="hidden lg:flex justify-center relative">
+                <div class="w-80 h-80 rounded-3xl overflow-hidden glass-panel p-2">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Alex" alt="Alex" class="w-full h-full object-cover rounded-2xl">
+                </div>
+                <div class="absolute -bottom-6 -right-6 p-6 glass-panel shadow-2xl">
+                    <span class="block text-2xl font-bold text-white">4+ Years</span>
+                    <span class="text-xs text-blue-300 uppercase tracking-widest font-bold">Research Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Interests -->
+    <section id="research" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="p-8 glass-panel hover:border-blue-400/30 transition-all">
+                <div class="w-12 h-12 rounded-2xl bg-blue-400/10 text-blue-400 flex items-center justify-center mb-6">
+                    <i data-lucide="brain"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Reinforcement Learning</h3>
+                <p class="text-slate-400 text-sm">Developing scalable algorithms for high-dimensional control tasks.</p>
+            </div>
+            <div class="p-8 glass-panel hover:border-blue-400/30 transition-all">
+                <div class="w-12 h-12 rounded-2xl bg-purple-400/10 text-purple-400 flex items-center justify-center mb-6">
+                    <i data-lucide="network"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Large Language Models</h3>
+                <p class="text-slate-400 text-sm">Reasoning and planning capabilities of transformer-based agents.</p>
+            </div>
+            <div class="p-8 glass-panel hover:border-blue-400/30 transition-all">
+                <div class="w-12 h-12 rounded-2xl bg-green-400/10 text-green-400 flex items-center justify-center mb-6">
+                    <i data-lucide="cpu"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Robotics</h3>
+                <p class="text-slate-400 text-sm">Sim-to-real transfer and low-latency motor control.</p>
+            </div>
+            <div class="p-8 glass-panel hover:border-blue-400/30 transition-all">
+                <div class="w-12 h-12 rounded-2xl bg-orange-400/10 text-orange-400 flex items-center justify-center mb-6">
+                    <i data-lucide="database"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Data Efficiency</h3>
+                <p class="text-slate-400 text-sm">Sample-efficient learning through structured priors.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" class="bg-blue-900/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4 text-white font-display">Latest Publications</h2>
+                    <p class="text-slate-400">Selected research papers published in top-tier conferences.</p>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <!-- Pub 1 -->
+                <div class="glass-panel p-8 hover:bg-white/10 transition-colors">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center">
+                            <i data-lucide="book-open"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <div class="flex gap-3 mb-2">
+                                <span class="px-2 py-0.5 bg-blue-600/20 text-blue-300 text-xs font-bold rounded">NeurIPS 2025</span>
+                                <span class="text-slate-500 text-sm">2025</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-white">Sparse Reinforcement Learning in High-Dimensional State Spaces</h3>
+                            <p class="text-slate-400 text-sm italic mb-4">"We introduce a novel framework for learning sparse representations in deep RL agents..."</p>
+                            <div class="flex gap-4 text-xs text-slate-500 font-mono uppercase">
+                                <span>#Reinforcement-Learning</span> <span>#Efficiency</span>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <button class="p-3 glass-panel hover:bg-white/20"><i data-lucide="file-text"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16">
+        <div>
+            <div class="flex items-center gap-3 mb-12">
+                <div class="w-10 h-10 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center">
+                    <i data-lucide="briefcase"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-white font-display">Experience</h2>
+            </div>
+            <div class="space-y-12 pl-8 border-l border-white/10">
+                <div class="relative">
+                    <div class="absolute -left-[37px] top-0 w-2.5 h-2.5 rounded-full bg-blue-600"></div>
+                    <h3 class="text-lg font-bold text-white">Research Intern</h3>
+                    <div class="text-blue-300 mb-2">Google DeepMind</div>
+                    <div class="text-xs text-slate-500 mb-4 uppercase tracking-wider">May 2024 - Aug 2024</div>
+                    <p class="text-sm text-slate-400">Developed new exploration strategies for multi-agent systems.</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="flex items-center gap-3 mb-12">
+                <div class="w-10 h-10 rounded-lg bg-purple-600/20 text-purple-400 flex items-center justify-center">
+                    <i data-lucide="graduation-cap"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-white font-display">Education</h2>
+            </div>
+            <div class="space-y-12 pl-8 border-l border-white/10">
+                <div class="relative">
+                    <div class="absolute -left-[37px] top-0 w-2.5 h-2.5 rounded-full bg-purple-600"></div>
+                    <h3 class="text-lg font-bold text-white">Ph.D. in Computer Science</h3>
+                    <div class="text-purple-300 mb-2">Stanford University</div>
+                    <div class="text-xs text-slate-500 mb-4 uppercase tracking-wider">2022 - 2026 (Expected)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-24 border-t border-white/5 text-center px-4 relative">
+        <div class="absolute bottom-0 right-0 w-80 h-80 bg-blue-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <h2 class="text-3xl md:text-5xl font-bold mb-8 text-white font-display">Let's Connect</h2>
+        <a href="mailto:alex.rivera@stanford.edu" class="inline-flex items-center gap-3 px-8 py-4 glass-panel hover:bg-white/20 transition-all text-lg font-medium text-white mb-12">
+            <i data-lucide="mail" class="text-blue-400"></i> alex.rivera@stanford.edu
+        </a>
+        <div class="flex justify-center gap-8 mb-16">
+            <a href="#" class="p-4 rounded-xl glass-panel text-slate-400 hover:text-white transition-all"><i data-lucide="github"></i></a>
+            <a href="#" class="p-4 rounded-xl glass-panel text-slate-400 hover:text-white transition-all"><i data-lucide="linkedin"></i></a>
+            <a href="#" class="p-4 rounded-xl glass-panel text-slate-400 hover:text-white transition-all"><i data-lucide="twitter"></i></a>
+        </div>
+        <p class="text-slate-500 text-sm">© 2024 Dr. Alex Rivera. Built with Vanilla JS & Tailwind.</p>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('nav-scrolled');
+                nav.classList.remove('h-20');
+                nav.classList.add('h-16');
+            } else {
+                nav.classList.remove('nav-scrolled');
+                nav.classList.add('h-20');
+                nav.classList.remove('h-16');
+            }
+        });
+    </script>
+</body>
+</html>
